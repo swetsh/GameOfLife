@@ -1,6 +1,6 @@
 package org.swiggy;
 
-public class Cell {
+public class Cell{
     public enum State {
         Alive, Dead
     }

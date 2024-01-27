@@ -1,5 +1,7 @@
 package org.swiggy;
 
+import java.lang.reflect.Method;
+
 public class Board {
     private Cell[][] cellGrid;
 
@@ -21,6 +23,29 @@ public class Board {
                 cellGrid[i][j] = new Cell(state);
             }
         }
+
+        for (int i=0; i<this.rows; i++) {
+            for (int j=0; j<this.columns; j++) {
+                cellGrid[i][j].addNeighbours(neighbours(i, j));
+            }
+        }
+    }
+
+    private Cell[] neighbours(int row, int column) {
+        Cell[] cells = new Cell[8];
+        int[][] positions = {
+                {-1, -1}, {-1, 0}, {-1, 1},
+                {0, -1},            {0, 1},
+                {1, -1},  {1, 0},  {1, 1}
+        };
+
+        for (int i = 0; i < 8; i++) {
+            int newRow = (row + positions[i][0] + this.rows) % this.rows;
+            int newColumn = (column + positions[i][1] + this.columns) % this.columns;
+            cells[i] = cellGrid[newRow][newColumn];
+        }
+
+        return cells;
     }
 
     @Override
@@ -34,4 +59,5 @@ public class Board {
         }
         return board.toString();
     }
+
 }
