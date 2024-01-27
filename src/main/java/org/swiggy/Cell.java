@@ -18,10 +18,6 @@ public class Cell {
         this.neighbours = neighbours;
     }
 
-    public State state() {
-        return this.currentState;
-    }
-
     public void evolve() {
         int aliveCount = 0;
         for (Cell neighbour : neighbours) {
@@ -37,5 +33,11 @@ public class Cell {
 
     private void updateFrame() {
         this.previousState = this.currentState;
+    }
+
+    @Override
+    public String toString(){
+        if (this.currentState == State.Alive) return "*";
+        else return "-";
     }
 }

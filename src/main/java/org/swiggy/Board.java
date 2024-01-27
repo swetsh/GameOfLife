@@ -18,13 +18,4 @@ public class Board {
         }
     }
 
-
-
-//    public void evolve() {
-//        for (int i=0; i<this.rows; i++) {
-//            for (int j=0; j<this.columns; j++) {
-//                cellGrid[i][j].evolve();
-//            }
-//        }
-//    }
 }

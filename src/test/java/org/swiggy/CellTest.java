@@ -8,13 +8,13 @@ public class CellTest {
     @Test
     public void TestCellIsDead() {
         Cell cell = new Cell(Cell.State.Dead);
-        assertEquals(Cell.State.Dead, cell.state());
+        assertEquals("-", cell.toString());
     }
 
     @Test
     public void TestCellIsAlive() {
         Cell cell = new Cell(Cell.State.Alive);
-        assertEquals(Cell.State.Alive, cell.state());
+        assertEquals("*", cell.toString());
     }
 
     @Test
@@ -28,7 +28,7 @@ public class CellTest {
         cell.addNeighbours(neighbours);
         cell.evolve();
 
-        assertEquals(Cell.State.Dead, cell.state());
+        assertEquals("-", cell.toString());
     }
 
     @Test
@@ -45,7 +45,7 @@ public class CellTest {
         cell.addNeighbours(neighbours);
         cell.evolve();
 
-        assertEquals(Cell.State.Alive, cell.state());
+        assertEquals("*", cell.toString());
     }
 
     @Test
@@ -62,7 +62,7 @@ public class CellTest {
         cell.addNeighbours(neighbours);
         cell.evolve();
 
-        assertEquals(Cell.State.Alive, cell.state());
+        assertEquals("*", cell.toString());
     }
 
     @Test
@@ -79,7 +79,7 @@ public class CellTest {
         cell.addNeighbours(neighbours);
         cell.evolve();
 
-        assertEquals(Cell.State.Dead, cell.state());
+        assertEquals("-", cell.toString());
     }
 
     @Test
@@ -93,7 +93,7 @@ public class CellTest {
         cell.addNeighbours(neighbours);
         cell.evolve();
 
-        assertEquals(Cell.State.Dead, cell.state());
+        assertEquals("-", cell.toString());
     }
 
     @Test
@@ -108,7 +108,7 @@ public class CellTest {
         cell.addNeighbours(neighbours);
         cell.evolve();
 
-        assertEquals(Cell.State.Dead, cell.state());
+        assertEquals("-", cell.toString());
     }
 
 }
