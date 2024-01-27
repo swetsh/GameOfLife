@@ -31,7 +31,7 @@ public class Cell{
             this.currentState = State.Dead;
     }
 
-    private void updateFrame() {
+    public void updateFrame() {
         this.previousState = this.currentState;
     }
 

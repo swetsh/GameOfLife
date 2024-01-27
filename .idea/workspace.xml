@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b639d6e-6a48-4821-9750-4ad951ae10c4" name="Changes" comment="Implemented board class with toString">
+    <list default="true" id="3b639d6e-6a48-4821-9750-4ad951ae10c4" name="Changes" comment="Method to add neighbours to cell">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/swiggy/GameLogTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/swiggy/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swiggy/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/swiggy/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swiggy/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/swiggy/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/swiggy/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/swiggy/GameLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swiggy/GameLog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +44,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -69,6 +70,7 @@
     "Gradle.BoardTest.TestBoardWithNegativeSeedExpectedRuntime.executor": "Run",
     "Gradle.BoardTest.executor": "Run",
     "Gradle.CellTest.executor": "Run",
+    "Gradle.GameLogTest.executor": "Run",
     "Gradle.GameOfLife [:Main.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -238,13 +240,22 @@
       <option name="project" value="LOCAL" />
       <updated>1706362693073</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Method to add neighbours to cell">
+      <option name="closed" value="true" />
+      <created>1706374008929</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706374008929</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="Override toString to Cell" />
     <MESSAGE value="Implemented board class with toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented board class with toString" />
+    <MESSAGE value="Method to add neighbours to cell" />
+    <option name="LAST_COMMIT_MESSAGE" value="Method to add neighbours to cell" />
   </component>
 </project>
