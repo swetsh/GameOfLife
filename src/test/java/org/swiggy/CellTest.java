@@ -5,20 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CellTest {
-
-    @Test
-    public void TestCellIsDeadOrAlive() {
-        Cell cell = new Cell(Cell.State.Alive, new Cell[0]);
-        assertTrue(cell.state() == Cell.State.Alive || cell.state() == Cell.State.Dead);
-    }
     @Test
     public void TestCellIsDead() {
-        Cell cell = new Cell(Cell.State.Dead, new Cell[0]);
+        Cell cell = new Cell(Cell.State.Dead);
         assertEquals(Cell.State.Dead, cell.state());
     }
 
+    @Test
     public void TestCellIsAlive() {
-        Cell cell = new Cell(Cell.State.Alive, new Cell[0]);
+        Cell cell = new Cell(Cell.State.Alive);
         assertEquals(Cell.State.Alive, cell.state());
     }
 
@@ -26,10 +21,11 @@ public class CellTest {
     public void TestCellDiesIfAllNeighboursAreDead() {
         Cell[] neighbours = new Cell[8];
         for (int i =0; i<8; i++) {
-            neighbours[i] = new Cell(Cell.State.Dead, new Cell[0]);
+            neighbours[i] = new Cell(Cell.State.Dead);
         }
 
-        Cell cell = new Cell(Cell.State.Alive, neighbours);
+        Cell cell = new Cell(Cell.State.Alive);
+        cell.addNeighbours(neighbours);
         cell.evolve();
 
         assertEquals(Cell.State.Dead, cell.state());
@@ -40,12 +36,13 @@ public class CellTest {
         Cell[] neighbours = new Cell[8];
         for (int i =0; i<8; i++) {
             if (i < 5)
-                neighbours[i] = new Cell(Cell.State.Dead, new Cell[0]);
+                neighbours[i] = new Cell(Cell.State.Dead);
             else
-                neighbours[i] = new Cell(Cell.State.Alive, new Cell[0]);
+                neighbours[i] = new Cell(Cell.State.Alive);
         }
 
-        Cell cell = new Cell(Cell.State.Dead, neighbours);
+        Cell cell = new Cell(Cell.State.Dead);
+        cell.addNeighbours(neighbours);
         cell.evolve();
 
         assertEquals(Cell.State.Alive, cell.state());
@@ -56,12 +53,13 @@ public class CellTest {
         Cell[] neighbours = new Cell[8];
         for (int i =0; i<8; i++) {
             if (i < 6)
-                neighbours[i] = new Cell(Cell.State.Dead, new Cell[0]);
+                neighbours[i] = new Cell(Cell.State.Dead);
             else
-                neighbours[i] = new Cell(Cell.State.Alive, new Cell[0]);
+                neighbours[i] = new Cell(Cell.State.Alive);
         }
 
-        Cell cell = new Cell(Cell.State.Alive, neighbours);
+        Cell cell = new Cell(Cell.State.Alive);
+        cell.addNeighbours(neighbours);
         cell.evolve();
 
         assertEquals(Cell.State.Alive, cell.state());
@@ -72,12 +70,13 @@ public class CellTest {
         Cell[] neighbours = new Cell[8];
         for (int i =0; i<8; i++) {
             if (i < 6)
-                neighbours[i] = new Cell(Cell.State.Dead, new Cell[0]);
+                neighbours[i] = new Cell(Cell.State.Dead);
             else
-                neighbours[i] = new Cell(Cell.State.Alive, new Cell[0]);
+                neighbours[i] = new Cell(Cell.State.Alive);
         }
 
-        Cell cell = new Cell(Cell.State.Dead, neighbours);
+        Cell cell = new Cell(Cell.State.Dead);
+        cell.addNeighbours(neighbours);
         cell.evolve();
 
         assertEquals(Cell.State.Dead, cell.state());
@@ -87,24 +86,26 @@ public class CellTest {
     public void TestCellDiesIfAllNeighboursAreAlive() {
         Cell[] neighbours = new Cell[8];
         for (int i =0; i<8; i++) {
-            neighbours[i] = new Cell(Cell.State.Alive, new Cell[0]);
+            neighbours[i] = new Cell(Cell.State.Alive);
         }
 
-        Cell cell = new Cell(Cell.State.Alive, neighbours);
+        Cell cell = new Cell(Cell.State.Alive);
+        cell.addNeighbours(neighbours);
         cell.evolve();
 
         assertEquals(Cell.State.Dead, cell.state());
     }
 
     @Test
-    public void TestCellDiesIf$NeighboursAreAlive() {
+    public void TestCellDiesIf4NeighboursAreAlive() {
         Cell[] neighbours = new Cell[8];
         for (int i =0; i<8; i++) {
-            if (i%2 == 0) neighbours[i] = new Cell(Cell.State.Alive, new Cell[0]);
-            else neighbours[i] = new Cell(Cell.State.Dead, new Cell[0]);
+            if (i%2 == 0) neighbours[i] = new Cell(Cell.State.Alive);
+            else neighbours[i] = new Cell(Cell.State.Dead);
         }
 
-        Cell cell = new Cell(Cell.State.Alive, neighbours);
+        Cell cell = new Cell(Cell.State.Alive);
+        cell.addNeighbours(neighbours);
         cell.evolve();
 
         assertEquals(Cell.State.Dead, cell.state());

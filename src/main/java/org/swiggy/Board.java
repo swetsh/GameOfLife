@@ -13,16 +13,18 @@ public class Board {
 
         for (int i=0; i<this.rows; i++) {
             for (int j=0; j<this.columns; j++) {
-                cellGrid[i][j] = new Cell(Cell.State.Dead, new Cell[2]);
+                cellGrid[i][j] = new Cell(Cell.State.Dead);
             }
         }
     }
 
-    public void evolve() {
-        for (int i=0; i<this.rows; i++) {
-            for (int j=0; j<this.columns; j++) {
-                cellGrid[i][j].evolve();
-            }
-        }
-    }
+
+
+//    public void evolve() {
+//        for (int i=0; i<this.rows; i++) {
+//            for (int j=0; j<this.columns; j++) {
+//                cellGrid[i][j].evolve();
+//            }
+//        }
+//    }
 }

@@ -2,16 +2,19 @@ package org.swiggy;
 
 public class Cell {
     public enum State {
-        Alive, Dead;
+        Alive, Dead
     }
 
     private State currentState;
     private State previousState;
-    private final Cell[] neighbours;
+    private Cell[] neighbours;
 
-    public Cell(State state, Cell[] neighbours) {
+    public Cell(State state) {
         this.currentState = state;
         this.previousState = state;
+    }
+
+    public void addNeighbours(Cell[] neighbours) {
         this.neighbours = neighbours;
     }
 
