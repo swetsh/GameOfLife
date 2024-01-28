@@ -123,7 +123,6 @@ public class CellTest {
 
         Cell cell = new Cell(Cell.State.Alive);
         cell.addNeighbours(neighbours);
-        cell.evolve();
 
         assertEquals(0, cell.evolve());
     }
@@ -137,8 +136,23 @@ public class CellTest {
 
         Cell cell = new Cell(Cell.State.Alive);
         cell.addNeighbours(neighbours);
-        cell.evolve();
 
         assertEquals(-1, cell.evolve());
+    }
+
+    @Test
+    public void TestEvolveShouldReturnOneIfCellGetAlive() {
+        Cell[] neighbours = new Cell[8];
+        for (int i =0; i<8; i++) {
+            if (i < 5)
+                neighbours[i] = new Cell(Cell.State.Dead);
+            else
+                neighbours[i] = new Cell(Cell.State.Alive);
+        }
+
+        Cell cell = new Cell(Cell.State.Dead);
+        cell.addNeighbours(neighbours);
+
+        assertEquals(1, cell.evolve());
     }
 }
