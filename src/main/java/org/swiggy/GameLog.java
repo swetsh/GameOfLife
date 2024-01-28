@@ -16,11 +16,12 @@ public class GameLog {
     }
 
     public Board contructBoard() {
-        System.out.println("Enter board height");
+
+        System.out.print("Enter board height: ");
         this.m = scanner.nextInt();
-        System.out.println("Enter board width");
+        System.out.print("Enter board width: ");
         this.n = scanner.nextInt();
-        System.out.println("Enter seed Value");
+        System.out.print("Enter seed Value: ");
         this.s = scanner.nextDouble();
         return new Board(this.m, this.n, this.s);
     }

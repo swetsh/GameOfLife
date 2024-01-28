@@ -18,7 +18,7 @@ public class Cell{
         this.neighbours = neighbours;
     }
 
-    public void evolve() {
+    public int evolve() {
         int aliveCount = 0;
         for (Cell neighbour : neighbours) {
             if (neighbour.previousState == State.Alive)
@@ -29,6 +29,7 @@ public class Cell{
             this.currentState = State.Alive;
         else if (aliveCount < 2 || aliveCount > 3)
             this.currentState = State.Dead;
+        return 0;
     }
 
     public void updateFrame() {

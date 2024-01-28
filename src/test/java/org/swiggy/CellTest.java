@@ -111,4 +111,20 @@ public class CellTest {
         assertEquals("-", cell.toString());
     }
 
+    @Test
+    public void TestEvolveShouldReturnZeroIfStateRemainsUnchanged() {
+        Cell[] neighbours = new Cell[8];
+        for (int i =0; i<8; i++) {
+            if (i < 6)
+                neighbours[i] = new Cell(Cell.State.Dead);
+            else
+                neighbours[i] = new Cell(Cell.State.Alive);
+        }
+
+        Cell cell = new Cell(Cell.State.Alive);
+        cell.addNeighbours(neighbours);
+        cell.evolve();
+
+        assertEquals(0, cell.evolve());
+    }
 }
