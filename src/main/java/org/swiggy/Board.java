@@ -54,7 +54,7 @@ public class Board {
     public void update() {
         for (int i=0; i<this.rows; i++) {
             for (int j=0; j<this.columns; j++) {
-                cellGrid[i][j].evolve();
+                this.aliveCellCount += cellGrid[i][j].evolve();
             }
         }
         for (int i=0; i<this.rows; i++) {

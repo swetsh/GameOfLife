@@ -72,12 +72,14 @@ class BoardTest {
 
         assertEquals(0, board.aliveCount());
     }
+
     @Test
     public void testAliveCellCountShouldBe100() {
         Board board = new Board(10, 10, 1);
 
         assertEquals(100, board.aliveCount());
     }
+
     @Test
     public void testAliveCellCountShouldBeSameAsStarCount() {
         Board board = new Board(10, 10, 0.4);
@@ -88,6 +90,7 @@ class BoardTest {
 
         assertEquals(aliveCount, board.aliveCount());
     }
+
     @Test
     public void testAliveCellCountShouldBeSameAsStarCountAfterUpdateShouldBeZero() {
         Board board = new Board(10, 10, 1);
@@ -95,6 +98,18 @@ class BoardTest {
         board.update();
 
         assertEquals(0, board.aliveCount());
+    }
+
+    @Test
+    public void testAliveCellCountShouldBeSameAsStarCountAfterUpdate() {
+        Board board = new Board(4, 4, 0.4);
+        board.update();
+
+        String boardString = board.toString();
+
+        long aliveCount = boardString.chars().filter(ch -> ch == '*').count();
+
+        assertEquals(aliveCount, board.aliveCount());
     }
 }
 
