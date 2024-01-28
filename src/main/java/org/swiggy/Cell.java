@@ -30,8 +30,10 @@ public class Cell{
         else if (aliveCount < 2 || aliveCount > 3)
             this.currentState = State.Dead;
 
-        if (previousState != currentState && previousState == State.Dead) return 1;
-        if (previousState != currentState) return -1;
+        if (previousState != currentState){
+            if (previousState == State.Dead) return 1;
+            return -1;
+        }
         return 0;
     }
 
