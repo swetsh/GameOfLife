@@ -70,11 +70,31 @@ class BoardTest {
     public void testAliveCellCountShouldBeZero() {
         Board board = new Board(10, 10, 0);
 
+        assertEquals(0, board.aliveCount());
+    }
+    @Test
+    public void testAliveCellCountShouldBe100() {
+        Board board = new Board(10, 10, 1);
+
+        assertEquals(100, board.aliveCount());
+    }
+    @Test
+    public void testAliveCellCountShouldBeSameAsStarCount() {
+        Board board = new Board(10, 10, 0.4);
+
         String boardString = board.toString();
 
         long aliveCount = boardString.chars().filter(ch -> ch == '*').count();
 
         assertEquals(aliveCount, board.aliveCount());
+    }
+    @Test
+    public void testAliveCellCountShouldBeSameAsStarCountAfterUpdateShouldBeZero() {
+        Board board = new Board(10, 10, 1);
+
+        board.update();
+
+        assertEquals(0, board.aliveCount());
     }
 }
 
