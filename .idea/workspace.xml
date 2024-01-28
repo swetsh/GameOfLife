@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b639d6e-6a48-4821-9750-4ad951ae10c4" name="Changes" comment="Test Alive Count After Evolve">
+    <list default="true" id="3b639d6e-6a48-4821-9750-4ad951ae10c4" name="Changes" comment="Test Alive Count After Evolve Passed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/swiggy/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swiggy/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/swiggy/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/swiggy/BoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
     "Gradle.BoardTest.executor": "Run",
     "Gradle.BoardTest.testAliveCellCountShouldBe100.executor": "Run",
     "Gradle.BoardTest.testAliveCellCountShouldBeSameAsStarCount.executor": "Run",
-    "Gradle.BoardTest.testAliveCellCountShouldBeSameAsStarCountAfterUpdate.executor": "Debug",
+    "Gradle.BoardTest.testAliveCellCountShouldBeSameAsStarCountAfterUpdate.executor": "Run",
     "Gradle.BoardTest.testAliveCellCountShouldBeSameAsStarCountAfterUpdateShouldBeZero.executor": "Run",
     "Gradle.Build GameOfLife.executor": "Run",
     "Gradle.CellTest.TestEvolveShouldReturnMinusOneIfCellDies.executor": "Run",
@@ -102,7 +100,7 @@
       <recent name="org.swiggy" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BoardTest.testAliveCellCountShouldBeSameAsStarCountAfterUpdate">
+  <component name="RunManager">
     <configuration name="BoardTest.testAliveCellCountShouldBe100" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -345,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706466078635</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Test Alive Count After Evolve Passed">
+      <option name="closed" value="true" />
+      <created>1706466480893</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706466480893</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -372,7 +378,8 @@
     <MESSAGE value="Refactor Evolve Method" />
     <MESSAGE value="Implemented Board Alive Cell Count" />
     <MESSAGE value="Test Alive Count After Evolve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Alive Count After Evolve" />
+    <MESSAGE value="Test Alive Count After Evolve Passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Alive Count After Evolve Passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,11 +388,6 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="9" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/swiggy/BoardTest.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
