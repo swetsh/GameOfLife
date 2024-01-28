@@ -16,7 +16,13 @@ public class GameLog {
     }
 
     public Board contructBoard() {
-        return new Board(3, 4, 1);
+        System.out.println("Enter board height");
+        this.m = scanner.nextInt();
+        System.out.println("Enter board width");
+        this.n = scanner.nextInt();
+        System.out.println("Enter seed Value");
+        this.s = scanner.nextDouble();
+        return new Board(this.m, this.n, this.s);
     }
 
 }
