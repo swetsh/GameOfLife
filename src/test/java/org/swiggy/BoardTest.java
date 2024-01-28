@@ -66,5 +66,15 @@ class BoardTest {
         assertTrue(Math.abs(aliveCount-20) < 10);
     }
 
+    @Test
+    public void testAliveCellCountShouldBeZero() {
+        Board board = new Board(10, 10, 0);
+
+        String boardString = board.toString();
+
+        long aliveCount = boardString.chars().filter(ch -> ch == '*').count();
+
+        assertEquals(aliveCount, board.aliveCount());
+    }
 }
 

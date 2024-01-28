@@ -8,6 +8,8 @@ public class Board {
     private final int rows;
     private final int columns;
 
+    private int aliveCellCount = 0;
+
     public Board(int rows, int columns, double seed) {
         if (rows <= 0 || columns <= 0) throw new RuntimeException();
         if (seed < 0 || seed > 1) throw new RuntimeException();
@@ -20,6 +22,7 @@ public class Board {
             for (int j=0; j<this.columns; j++) {
                 double randomValue = Math.random();
                 Cell.State state = (randomValue < seed) ? Cell.State.Alive : Cell.State.Dead;
+                if (state == Cell.State.Alive) this.aliveCellCount++;
                 cellGrid[i][j] = new Cell(state);
             }
         }
@@ -59,6 +62,10 @@ public class Board {
                 cellGrid[i][j].updateFrame();
             }
         }
+    }
+
+    public int aliveCount() {
+        return this.aliveCellCount;
     }
 
     @Override
