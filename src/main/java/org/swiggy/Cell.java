@@ -29,6 +29,7 @@ public class Cell{
             this.currentState = State.Alive;
         else if (aliveCount < 2 || aliveCount > 3)
             this.currentState = State.Dead;
+        if (previousState != currentState) return -1;
         return 0;
     }
 

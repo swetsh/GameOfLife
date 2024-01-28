@@ -127,4 +127,18 @@ public class CellTest {
 
         assertEquals(0, cell.evolve());
     }
+
+    @Test
+    public void TestEvolveShouldReturnMinusOneIfCellDies() {
+        Cell[] neighbours = new Cell[8];
+        for (int i =0; i<8; i++) {
+            neighbours[i] = new Cell(Cell.State.Dead);
+        }
+
+        Cell cell = new Cell(Cell.State.Alive);
+        cell.addNeighbours(neighbours);
+        cell.evolve();
+
+        assertEquals(-1, cell.evolve());
+    }
 }

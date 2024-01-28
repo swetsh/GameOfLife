@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b639d6e-6a48-4821-9750-4ad951ae10c4" name="Changes" comment="Add GameLog Test">
+    <list default="true" id="3b639d6e-6a48-4821-9750-4ad951ae10c4" name="Changes" comment="Test Evolve in Cell Class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/swiggy/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swiggy/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/swiggy/GameLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/swiggy/GameLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/swiggy/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/swiggy/CellTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/swiggy/GameLogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/swiggy/GameLogTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +68,7 @@
     "Gradle.BoardTest.TestBoardWithNegativeSeedExpectedRuntime.executor": "Run",
     "Gradle.BoardTest.executor": "Run",
     "Gradle.Build GameOfLife.executor": "Run",
+    "Gradle.CellTest.TestEvolveShouldReturnMinusOneIfCellDies.executor": "Run",
     "Gradle.CellTest.TestEvolveShouldReturnZeroIfStateRemainsUnchanged.executor": "Run",
     "Gradle.CellTest.executor": "Run",
     "Gradle.GameLogTest.TestConstructBoardShouldReturnBoard.executor": "Run",
@@ -99,8 +98,8 @@
       <recent name="org.swiggy" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CellTest.TestEvolveShouldReturnZeroIfStateRemainsUnchanged">
-    <configuration name="BoardTest.Test2x2BoardWithAllAliceCell" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CellTest.TestEvolveShouldReturnMinusOneIfCellDies">
+    <configuration name="CellTest.TestEvolveShouldReturnMinusOneIfCellDies" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,7 +112,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.swiggy.BoardTest.Test2x2BoardWithAllAliceCell&quot;" />
+            <option value="&quot;org.swiggy.CellTest.TestEvolveShouldReturnMinusOneIfCellDies&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -222,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CellTest.TestEvolveShouldReturnMinusOneIfCellDies" />
         <item itemvalue="Gradle.CellTest.TestEvolveShouldReturnZeroIfStateRemainsUnchanged" />
         <item itemvalue="Gradle.GameLogTest.TestConstructBoardShouldReturnBoard" />
         <item itemvalue="Gradle.GameLogTest.TestConstructBoardShouldReturnBoardOfSize3x4" />
         <item itemvalue="Gradle.GameLogTest.TestConstructBoardShouldReturnBoardOfSize3x4AliveCells" />
-        <item itemvalue="Gradle.BoardTest.Test2x2BoardWithAllAliceCell" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706451274614</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Test Evolve in Cell Class">
+      <option name="closed" value="true" />
+      <created>1706465084638</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706465084638</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +322,8 @@
     <MESSAGE value="Method to add neighbours to cell" />
     <MESSAGE value="Add GameLog Class" />
     <MESSAGE value="Add GameLog Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add GameLog Test" />
+    <MESSAGE value="Test Evolve in Cell Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Evolve in Cell Class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
